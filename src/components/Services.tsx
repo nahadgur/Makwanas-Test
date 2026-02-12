@@ -39,7 +39,7 @@ const Services: React.FC = () => {
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
                     activeService === service.id ? 'bg-makwana-mid' : 'bg-gray-300'
                   }`}>
-                    {React.cloneElement(service.icon as React.ReactElement, { className: 'w-6 h-6 text-white' })}
+                    {React.cloneElement(service.icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6 text-white' })}
                   </div>
                   <div className="flex-1">
                     <h3 className={`text-xl font-bold ${activeService === service.id ? 'text-makwana-dark' : 'text-gray-700'}`}>
@@ -75,7 +75,7 @@ const Services: React.FC = () => {
                      return (
                        <>
                          <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
-                           {React.cloneElement(service.icon as React.ReactElement, { className: 'w-8 h-8 text-white' })}
+                           {React.cloneElement(service.icon as React.ReactElement<{ className?: string }>, { className: 'w-8 h-8 text-white' })}
                          </div>
                          <h3 className="text-3xl font-display font-bold mb-4">{service.title}</h3>
                          <p className="text-white/80 text-lg mb-8 leading-relaxed">
