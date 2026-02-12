@@ -37,7 +37,7 @@ const SuccessStories: React.FC = () => {
 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 text-makwana-mid group-hover:text-makwana-dark">
-                    {React.cloneElement(story.icon as React.ReactElement, { className: 'w-6 h-6' })}
+                    {React.cloneElement(story.icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6' })}
                   </div>
                   
                   <span className="text-xs font-bold text-makwana-mid uppercase tracking-wider mb-2 block group-hover:text-makwana-light">
